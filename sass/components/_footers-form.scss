@@ -1,0 +1,42 @@
+.form-subscript {
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+}
+.form-subscript__text {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.form-subscript__input {
+  padding-left: 16px;
+  color: var(--text-on-background-color);
+  width: 358px;
+  height: 50px;
+  outline: none;
+
+  background-color: var(--color-backgrount-hero-footer);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+.form-subscript__button {
+  margin-left: 12px;
+  display: inline-block;
+  padding-right: 62px;
+  color: var(--text-on-background-color);
+  width: 200px;
+  height: 50px;
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+.form-subscript__icon {
+  position: absolute;
+  margin-left: 10px;
+  fill: var(--text-on-background-color);
+}

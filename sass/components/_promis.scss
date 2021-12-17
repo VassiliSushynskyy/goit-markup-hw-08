@@ -1,0 +1,33 @@
+.promis {
+  padding-bottom: 0px;
+}
+.promis__list {
+  display: flex;
+  padding: 0;
+}
+.promis__item {
+  min-width: 270px;
+  min-height: 101px;
+  margin-right: 30px;
+}
+.promis__icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+}
+.promis__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.promis__text {
+  color: var(--secondary-color-text);
+  font-size: 14px;
+  line-height: 1.71;
+}

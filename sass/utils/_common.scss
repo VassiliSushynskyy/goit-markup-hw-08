@@ -1,0 +1,32 @@
+.link {
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}
+
+.list {
+  list-style: none;
+  text-decoration: none;
+}
+.btn {
+  padding: 6px 22px;
+  background: #f5f4fa;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.is-hidden {
+  display: flex;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+}

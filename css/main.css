@@ -101,7 +101,8 @@ button {
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
+  min-width: 320;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -134,6 +135,7 @@ button {
 
 .mobile-header {
   display: flex;
+  border-color: var(--background-color);
 }
 
 .menu-toggle {
@@ -144,42 +146,68 @@ button {
   margin-left: auto;
 }
 
-/*.header {
-  border-bottom: 1px solid #ececec;
-}*/
-/*.header__section {
-  display: flex;
-  align-items: center;
-}*/
-/*.header__navigation {
-  display: flex;
-  align-items: center;
-}*/
-.header__logo {
-  margin: 16px 0px;
-  /*margin-right: 93px;*/
+@media (min-width: 760px) {
+  .menu-toggle {
+    display: none;
+  }
 }
 
-/*.header__item:not(:last-child) {
+.mobile-menu__icon-menu:hover, .mobile-menu__icon-menu:focus {
+  fill: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+@media (max-width: 760px) {
+  .menu {
+    display: none;
+  }
+}
+
+.header__section {
+  display: flex;
+  align-items: center;
+}
+
+.header__navigation {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  margin: 16px 0px;
+  margin-right: 93px;
+}
+
+.header__item:not(:last-child) {
   margin-right: 50px;
-}*/
-/*.header__link {
+}
+
+.header__link {
   display: flex;
   position: relative;
   color: var(--primary-color-text);
-  @include font(14px, 500, 1.14, 0.02);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02;
   color: var(--secondary-color-text);
   padding: 32px 0px;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover,
-  &:focus {
-    color: var(--accent-color);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
-}*/
-/*.header__link--active::after {
+}
+
+.header__link:hover, .header__link:focus {
+  color: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header__link--active::after {
   position: absolute;
   bottom: -1px;
   content: "";
@@ -187,29 +215,37 @@ button {
   height: 4px;
   background-color: var(--accent-color);
   border-radius: 2px;
-}*/
-/*.contacts__icon {
+}
+
+.contacts__icon {
   margin-right: 10px;
   fill: currentColor;
-}*/
-/*.contact {
+}
+
+.contact {
   color: var(--secondary-color-text);
-  @include font(14px, 500, 1.14, 0.02em);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
   display: flex;
   align-items: center;
-  &:hover,
-  &:focus {
-    color: var(--accent-color);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
-}*/
-/*.contacts__section {
+}
+
+.contact:hover, .contact:focus {
+  color: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contacts__section {
   margin-left: auto;
-}*/
-/*.contact--mail {
+}
+
+.contact--mail {
   margin-right: 50px;
-}*/
+}
+
 .logo {
   color: var(--accent-color);
   font-family: Raleway, sans-serif;
@@ -945,5 +981,63 @@ button {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
   border-top: none;
+}
+
+.menu-container {
+  position: fixed;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  transform: translateY(100%);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 320px) {
+  .menu-container {
+    width: 320px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .menu-container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .menu-container {
+    width: 1200px;
+  }
+}
+
+.menu-container.is-open {
+  transform: translateY(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 10px;
+  right: 0px;
+}
+
+.mobile-header__section {
+  margin: 48px 40px;
+}
+
+.mobile-header__item:not(:last-child) {
+  margin-bottom: 32px;
 }
 /*# sourceMappingURL=main.css.map */

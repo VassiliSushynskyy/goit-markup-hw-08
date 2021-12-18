@@ -1,7 +1,7 @@
 @import "./utils/variables";
 @import "./utils/reset";
 @import "./utils/common";
-@import './utils/mixins';
+@import "./utils/mixins";
 @import "./components/container";
 @import "./components/header";
 @import "./components/logo";
@@ -16,3 +16,4 @@
 @import "./components/modal";
 @import "./components/portfolio/portfolio-buttons";
 @import "./components/portfolio/portfolio-item";
+@import "./components/mobile-menu";

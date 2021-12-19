@@ -26,7 +26,7 @@
               >Web<span class="logo__header">Studio</span></a
             >
             <button
-              class="menu-toggle js-open-menu"
+              class="menu-toggle menu-toggle__header  js-open-menu"
               aria-expanded="false"
               aria-controls="mobile-menu"
             >
@@ -534,8 +534,10 @@
       </div>
     </div>
     <div class="menu-container js-menu-container" id="mobile-menu">
-<button class="menu-toggle js-close-menu">
-        <svg
+      <div class="container">
+      <div class="mobile-menu__top">
+      <button class="menu-toggle js-close-menu">
+        <svg class="mobile-menu__icon-menu"
           fill="currentColor"
           width="40"
           height="40"
@@ -558,8 +560,37 @@
               <a class="link mobile-header__link" href="">Контакты</a>
             </li>
           </ul>
-
-    </div>
+          </div>
+          <div class="mobile-menu__bottom">
+          <div class="contacts__section header__section mobile-menu__contacts">
+          <a class="link contact mobile-contact-tel" href="tel:+380961111111">
+            +38 096 111 11 11</a>
+          <a class="link contact mobile-contact-mail" href="mailto:info@devstudio.com">
+            info@devstudio.com
+          </a>
+          </div>
+          <ul class="mobile-social list">
+                  <li class="mobile-social__item">
+                    <a class="mobile-social__link link" href="#"
+                      >Instagram</a>
+                  </li>
+                  <li class="mobile-social__item">
+                    <a class="mobile-social__link link" href="#"
+                      >Twitter</a>
+                  </li>
+                  <li class="mobile-social__item">
+                    <a class="mobile-social__link link" href="#"
+                      >Facebook</a>
+                  </li>
+                  <li class="mobile-social__item">
+                    <a class="mobile-social__link link" href="#"
+                      >LinkedIn</a>
+                  </li>
+                </ul>
+          </div>
+          </div>
+      </div>
+      
     <script src="./js/modal.js"></script>
     <script
       defer

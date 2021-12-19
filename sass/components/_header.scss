@@ -3,10 +3,12 @@
   border-color: var(--background-color);
 }
 .menu-toggle {
+  position: absolute;
+  right: 15px;
+  top: 10px;
   padding: 0;
   border: none;
   background-color: transparent;
-  margin: 10px 0px;
   margin-left: auto;
   @media (min-width: 760px) {
     display: none;
@@ -40,7 +42,7 @@
 
 .header__logo {
   margin: 16px 0px;
-  margin-right: 93px;
+  /*margin-right: 93px;*/
 }
 
 .header__item:not(:last-child) {

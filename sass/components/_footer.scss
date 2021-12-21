@@ -7,10 +7,15 @@
 .footer__logo {
   color: var(--text-on-background-color);
 }
+.mobile-footer-logo {
+}
 .footer__address {
   background: var(--color-backgrount-hero-footer);
   color: var(--text-on-background-color);
   margin-top: 20px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }
 .footer__link-place-map {
   font-size: 14px;
@@ -47,7 +52,6 @@
   margin-top: 9px;
 }
 .footer__sections {
-  display: flex;
-  align-items: baseline;
+  /* display: flex;
+  align-items: baseline;*/
 }
-

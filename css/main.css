@@ -552,7 +552,7 @@ button {
 .customer__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  margin: -15px;
   align-items: center;
   margin-top: 30px;
   margin-bottom: -30px;
@@ -563,11 +563,13 @@ button {
 
 .customer__item {
   display: flex;
+  flex-wrap: wrap;
+  width: calc(100% / 2 - 30px);
+  height: 92px;
+  margin: 15px;
   margin-bottom: 30px;
   justify-content: center;
   align-items: center;
-  width: 210px;
-  height: 92px;
   /*width: 170px;
   */
 }
@@ -734,20 +736,25 @@ button {
 
 .backdrop {
   position: fixed;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.2);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: scroll;
+}
+
+@media screen and (max-width: 479.5px) {
+  .backdrop {
+    padding: 15px;
+  }
 }
 
 .modal {
-  position: fixed;
+  position: relative;
   top: 50%;
   left: 50%;
-  width: 450px;
-  min-height: 609px;
   /*width: 528px;
   min-height: 581px;*/
   background-color: var(--background-color);
@@ -760,6 +767,29 @@ button {
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(1.15) rotate(0deg);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 480px) {
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% -50%);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+  }
 }
 
 .modal__button-close {
@@ -803,10 +833,11 @@ button {
 .input__text {
   display: block;
   /*width: 448px;*/
-  width: 370px;
+  width: 100%;
   height: 40px;
   margin-bottom: 10px;
   padding-left: 42px;
+  padding-right: 10px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   box-sizing: border-box;
@@ -840,7 +871,7 @@ button {
 .input__textarea {
   resize: none;
   padding: 12px 16px;
-  width: 370px;
+  width: 100%;
   height: 120px;
   /*width: 448px;
   height: 120px;*/

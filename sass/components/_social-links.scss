@@ -41,7 +41,8 @@
 
 .social--footer {
   color: #afb1b8;
-  margin: 20px 0 0 0;
+
+  margin-bottom: 60px;
 }
 .social__link--footer {
   color: var(--text-on-background-color);
@@ -49,12 +50,11 @@
   fill: currentColor;
 }
 .footer__social {
-  margin-left: 70px;
+  /* margin-left: 70px;*/
 }
 .footer__social-text {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
+  @include font(14px, 700, 1.14, 00.03em);
+
   text-transform: uppercase;
+  margin-bottom: 20px;
 }

@@ -169,7 +169,7 @@ button {
   margin-left: auto;
 }
 
-@media (min-width: 760px) {
+@media (min-width: 768px) {
   .menu-toggle {
     display: none;
   }
@@ -185,7 +185,7 @@ button {
   border-bottom: 1px solid #ececec;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 767px) {
   .menu {
     display: none;
   }
@@ -201,9 +201,23 @@ button {
   align-items: center;
 }
 
+@media screen and (min-width: 768px) {
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
 .header__logo {
   margin: 16px 0px;
-  /*margin-right: 93px;*/
+  margin-right: 88px;
+}
+
+@media screen and (min-width: 1200px) {
+  .header__logo {
+    margin-right: 93px;
+  }
 }
 
 .header__item:not(:last-child) {
@@ -245,6 +259,10 @@ button {
   fill: currentColor;
 }
 
+.contact__item {
+  margin-left: auto;
+}
+
 .contact {
   color: var(--secondary-color-text);
   font-size: 14px;
@@ -261,12 +279,15 @@ button {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contacts__section {
-  margin-left: auto;
+@media screen and (min-width: 768px) {
+  .contacts__section {
+    display: block;
+    margin-left: auto;
+  }
 }
 
 .contact--mail {
-  margin-right: 50px;
+  /*margin-right: 50px;*/
 }
 
 .logo {
@@ -742,7 +763,6 @@ button {
   left: 0;
   background-color: rgba(0, 0, 0, 0.2);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  overflow-y: scroll;
 }
 
 @media screen and (max-width: 479.5px) {

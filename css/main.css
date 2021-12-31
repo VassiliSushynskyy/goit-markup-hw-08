@@ -175,6 +175,10 @@ button {
   }
 }
 
+.menu-toggle .mobile-menu__contacts {
+  margin-left: auto;
+}
+
 .mobile-menu__icon-menu:hover, .mobile-menu__icon-menu:focus {
   fill: var(--accent-color);
   transition-duration: 250ms;
@@ -259,10 +263,6 @@ button {
   fill: currentColor;
 }
 
-.contact__item {
-  margin-left: auto;
-}
-
 .contact {
   color: var(--secondary-color-text);
   font-size: 14px;
@@ -287,7 +287,13 @@ button {
 }
 
 .contact--mail {
-  /*margin-right: 50px;*/
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 1200px) {
+  .contact--mail {
+    margin-right: 50px;
+  }
 }
 
 .logo {
@@ -319,6 +325,42 @@ button {
   background-size: cover;
 }
 
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero-mobx2.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero-tabx1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero-tabx2.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero-deckx1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero-deckx2.jpg);
+  }
+}
+
 .hero__text {
   color: var(--text-on-background-color);
   font-size: 26px;
@@ -330,9 +372,23 @@ button {
   margin-left: auto;
   margin-right: auto;
   padding: 0px 45px;
-  /*@include font(44px, 900, 1.36, 0.06em);
-  width: 696px;
-  height: 120px;*/
+  max-width: 360px;
+}
+
+@media screen and (min-width: 768px) {
+  .hero__text {
+    padding: 0px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__text {
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    max-width: 696px;
+  }
 }
 
 .hero__button {
@@ -354,14 +410,34 @@ button {
 }
 
 .promis__list {
-  /*display: flex;*/
   padding: 0;
 }
 
-.promis__item {
-  min-width: 270px;
-  min-height: 101px;
-  /*margin-right: 30px;*/
+@media screen and (min-width: 768px) {
+  .promis__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.5px) {
+  .promis__list {
+    margin: -15px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.5px) {
+  .promis__item {
+    flex-basis: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: 1200) {
+  .promis__item {
+    flex-basis: calc((100% - 3 * 30px) / 4);
+    margin-right: 30px;
+  }
 }
 
 .promis__icons {
@@ -440,6 +516,19 @@ button {
   background: #f5f4fa;
 }
 
+@media screen and (min-width: 768px) {
+  .team {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.5px) {
+  .team {
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+
 .team__list {
   align-items: center;
   margin-top: 30px;
@@ -474,6 +563,37 @@ button {
   /*.team__list &:not(:last-child) {
     margin-right: 30px;
   }*/
+}
+
+@media screen and (min-width: 420px) and (max-width: 767.5px) {
+  .team__item {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.5px) {
+  .team__item {
+    flex-basis: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team__item {
+    flex-basis: calc((100% - 3 * 30px) / 4);
+  }
+}
+
+@media screen and (max-width: 767.5px) {
+  .team__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team__item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .team__name {

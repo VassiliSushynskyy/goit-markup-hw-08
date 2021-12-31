@@ -14,6 +14,53 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../img/hero-mobx2.jpg);
+  }
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../img/hero-tabx1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../img/hero-tabx2.jpg);
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../img/hero-deckx1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../img/hero-deckx2.jpg);
+    }
+  }
 }
 .hero__text {
   color: var(--text-on-background-color);
@@ -23,9 +70,14 @@
   margin-left: auto;
   margin-right: auto;
   padding: 0px 45px;
-  /*@include font(44px, 900, 1.36, 0.06em);
-  width: 696px;
-  height: 120px;*/
+  max-width: 360px;
+  @media screen and (min-width: 768px) {
+    padding: 0px;
+  }
+  @media screen and (min-width: 1200px) {
+    @include font(44px, 900, 1.36, 0.06em);
+    max-width: 696px;
+  }
 }
 .hero__button {
   background: var(--accent-color);

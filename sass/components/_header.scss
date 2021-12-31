@@ -13,6 +13,9 @@
   @media (min-width: 768px) {
     display: none;
   }
+  .mobile-menu__contacts {
+    margin-left: auto;
+  }
 }
 .mobile-menu__icon-menu {
   &:hover,
@@ -87,9 +90,7 @@
   margin-right: 10px;
   fill: currentColor;
 }
-.contact__item {
-  margin-left: auto;
-}
+
 .contact {
   color: var(--secondary-color-text);
   @include font(14px, 500, 1.14, 0.02em);
@@ -109,5 +110,8 @@
   }
 }
 .contact--mail {
-  /*margin-right: 50px;*/
+  margin-bottom: 10px;
+  @media screen and (min-width: 1200px) {
+    margin-right: 50px;
+  }
 }

@@ -24,8 +24,12 @@
   margin-bottom: 30px;
   justify-content: center;
   align-items: center;
-  /*width: 170px;
-  */
+  @media screen and(min-width: 768px) {
+    width: calc(100% / 3 - 30px);
+  }
+  @media screen and(min-width: 1200px) {
+    width: 170px;
+  }
 }
 .customer__link {
   display: flex;

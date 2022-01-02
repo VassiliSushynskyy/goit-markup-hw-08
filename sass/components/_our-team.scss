@@ -3,16 +3,18 @@
   @media screen and (min-width: 768px) {
     display: flex;
   }
-  @media screen and (min-width: 768px) and (max-width: 1199.5px) {
-    flex-wrap: wrap;
-    margin: -15px;
-  }
+
   &__list {
     align-items: center;
     margin-top: 30px;
     text-align: center;
     margin-bottom: -30px;
-    @media screen and(min-height:768px) {
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199.5px) {
+      flex-wrap: wrap;
+      margin: -15px;
     }
     /*display: flex;
     justify-content: space-between;*/
@@ -26,6 +28,7 @@
   line-height: 1.17;
   width: 264px;
   height: 42px;*/
+  margin-bottom: 30px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -35,13 +38,13 @@
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 30px;
+  width: 100%;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   @media screen and (min-width: 420px) and (max-width: 767.5px) {
     width: 450px;
   }
-
   @media screen and (min-width: 768px) and (max-width: 1199.5px) {
     flex-basis: calc((100% - 2 * 30px) / 2);
     margin: 15px;
@@ -79,4 +82,15 @@
 .team__text-section {
   padding-top: 30px;
   padding-bottom: 30px;
+}
+.team__img {
+  @media screen and (min-width: 768px) {
+    width: 354px;
+    height: 374px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+    height: 260px;
+  }
 }

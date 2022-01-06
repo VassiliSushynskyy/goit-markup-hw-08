@@ -41,8 +41,9 @@
 
 .social--footer {
   color: #afb1b8;
-
-  margin-bottom: 60px;
+  @media screen and (max-width: 1199.5px) {
+    margin-bottom: 60px;
+  }
 }
 .social__link--footer {
   color: var(--text-on-background-color);
@@ -50,7 +51,9 @@
   fill: currentColor;
 }
 .footer__social {
-  /* margin-left: 70px;*/
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+  }
 }
 .footer__social-text {
   @include font(14px, 700, 1.14, 00.03em);

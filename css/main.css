@@ -175,10 +175,6 @@ button {
   }
 }
 
-.menu-toggle .mobile-menu__contacts {
-  margin-left: auto;
-}
-
 .mobile-menu__icon-menu:hover, .mobile-menu__icon-menu:focus {
   fill: var(--accent-color);
   transition-duration: 250ms;
@@ -202,12 +198,14 @@ button {
 
 .header__navigation {
   display: flex;
+  flex-grow: 1;
   align-items: center;
 }
 
 @media screen and (min-width: 768px) {
   .menu {
     display: flex;
+    flex-grow: 1;
     justify-content: space-between;
     align-items: center;
   }
@@ -286,6 +284,12 @@ button {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .contacts__section {
+    display: flex;
+  }
+}
+
 .contact--mail {
   margin-bottom: 10px;
 }
@@ -293,6 +297,7 @@ button {
 @media screen and (min-width: 1200px) {
   .contact--mail {
     margin-right: 50px;
+    margin-bottom: 0px;
   }
 }
 
@@ -560,15 +565,18 @@ button {
   font-weight: 700;
   line-height: 1.17;
   letter-spacing: 0.03em;
-  /* font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  width: 264px;
+  /*width: 264px;
   height: 42px;*/
   margin-bottom: 30px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media screen and (min-width: 1200px) {
+  .team__title {
+    font-size: 36px;
+  }
 }
 
 .team__item {
@@ -695,7 +703,12 @@ button {
 
 .social--footer {
   color: #afb1b8;
-  margin-bottom: 60px;
+}
+
+@media screen and (max-width: 1199.5px) {
+  .social--footer {
+    margin-bottom: 60px;
+  }
 }
 
 .social__link--footer {
@@ -704,8 +717,10 @@ button {
   fill: currentColor;
 }
 
-.footer__social {
-  /* margin-left: 70px;*/
+@media screen and (min-width: 1200px) {
+  .footer__social {
+    margin-left: 70px;
+  }
 }
 
 .footer__social-text {
@@ -797,7 +812,12 @@ button {
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  /*@include font(36px, 700, 1.17, 0.03em);*/
+}
+
+@media screen and (min-width: 1200px) {
+  .customer__title {
+    font-size: 36px;
+  }
 }
 
 .footer {
@@ -820,9 +840,14 @@ button {
   background: var(--color-backgrount-hero-footer);
   color: var(--text-on-background-color);
   display: block;
-  margin-bottom: 60px;
   margin-right: auto;
   margin-left: auto;
+}
+
+@media screen and (max-width: 1199.5px) {
+  .footer__address {
+    margin-bottom: 60px;
+  }
 }
 
 .footer__link-place-map {
@@ -869,10 +894,32 @@ button {
   text-align: center;
 }
 
+@media screen and (min-width: 768px) {
+  .footer__sections {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__sections {
+    flex-wrap: nowrap;
+    align-items: baseline;
+    text-align: start;
+    justify-content: start;
+  }
+}
+
 .form-subscript {
   justify-content: center;
   align-items: center;
-  /*margin-left: auto;*/
+}
+
+@media screen and (min-width: 1200px) {
+  .form-subscript {
+    margin-left: auto;
+  }
 }
 
 .form-subscript__text {
@@ -887,17 +934,21 @@ button {
 .form-subscript__input {
   padding-left: 16px;
   color: var(--text-on-background-color);
-  /*width: 358px;*/
   width: 100%;
   height: 50px;
   outline: none;
-  padding-bottom: 20px;
   margin-bottom: 20px;
   background-color: var(--color-backgrount-hero-footer);
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+}
+
+@media screen and (min-width: 1200px) {
+  .form-subscript__input {
+    width: 358px;
+  }
 }
 
 .form-subscript__button {
@@ -1166,8 +1217,20 @@ button {
   flex-wrap: wrap;
   margin-top: 60px;
   margin-bottom: 40px;
-  /*justify-content: center;
-  margin-bottom: 50px;*/
+}
+
+@media screen and (min-width: 768px) {
+  .filter {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .filter {
+    margin-top: 94px;
+    margin-bottom: 50px;
+  }
 }
 
 .filter .filter__item:not(last-child) {
@@ -1326,6 +1389,14 @@ button {
 .mobile-menu__contacts {
   flex-direction: column;
   display: block;
+  margin-left: auto;
+}
+
+@media screen and (min-width: 1200px) {
+  .mobile-menu__contacts {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .mobile-contact-tel {

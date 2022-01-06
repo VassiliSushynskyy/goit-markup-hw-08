@@ -40,6 +40,11 @@
 .mobile-menu__contacts {
   flex-direction: column;
   display: block;
+  margin-left: auto;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: row;
+  }
 }
 .mobile-contact-tel {
   @include font(34px, 500, 1.17, 0.02em);

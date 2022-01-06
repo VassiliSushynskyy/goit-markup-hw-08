@@ -23,10 +23,11 @@
 
 .team__title {
   @include font(28px, 700, 1.17, 0.03em);
-  /* font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  width: 264px;
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+  }
+
+  /*width: 264px;
   height: 42px;*/
   margin-bottom: 30px;
   text-align: center;

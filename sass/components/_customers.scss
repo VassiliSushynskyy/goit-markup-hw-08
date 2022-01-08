@@ -9,11 +9,7 @@
   flex-wrap: wrap;
   margin: -15px;
   align-items: center;
-  margin-top: 30px;
   margin-bottom: -30px;
-  /*& .customer__item:not(:last-child) {
-    margin-right: 30px;
-  }*/
 }
 .customer__item {
   display: flex;
@@ -63,6 +59,7 @@
   @include font(28px, 700, 1.17, 0.03em);
   @media screen and (min-width: 1200px) {
     font-size: 36px;
+    margin-bottom: 50px;
   }
   text-align: center;
   align-items: center;

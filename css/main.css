@@ -194,6 +194,7 @@ button {
 .header__section {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .header__navigation {
@@ -234,7 +235,7 @@ button {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02;
-  color: var(--secondary-color-text);
+  color: var(--primary-color-text);
   padding: 32px 0px;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -353,6 +354,8 @@ button {
 
 @media screen and (min-width: 1200px) {
   .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero-deckx1.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -376,7 +379,6 @@ button {
   text-transform: uppercase;
   margin-left: auto;
   margin-right: auto;
-  padding: 0px 45px;
   max-width: 360px;
 }
 
@@ -472,6 +474,13 @@ button {
   line-height: 1.14;
   text-transform: uppercase;
   margin-bottom: 10px;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .promis__title {
+    text-align: left;
+  }
 }
 
 .promis__text {
@@ -528,6 +537,12 @@ button {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .about {
+    padding-top: 0px;
+  }
+}
+
 .team {
   background: #f5f4fa;
 }
@@ -543,8 +558,6 @@ button {
   margin-top: 30px;
   text-align: center;
   margin-bottom: -30px;
-  /*display: flex;
-    justify-content: space-between;*/
 }
 
 @media screen and (min-width: 768px) {
@@ -565,8 +578,6 @@ button {
   font-weight: 700;
   line-height: 1.17;
   letter-spacing: 0.03em;
-  /*width: 264px;
-  height: 42px;*/
   margin-bottom: 30px;
   text-align: center;
   margin-left: auto;
@@ -576,6 +587,7 @@ button {
 @media screen and (min-width: 1200px) {
   .team__title {
     font-size: 36px;
+    margin-bottom: 50px;
   }
 }
 
@@ -743,11 +755,7 @@ button {
   flex-wrap: wrap;
   margin: -15px;
   align-items: center;
-  margin-top: 30px;
   margin-bottom: -30px;
-  /*& .customer__item:not(:last-child) {
-    margin-right: 30px;
-  }*/
 }
 
 .customer__item {
@@ -817,6 +825,7 @@ button {
 @media screen and (min-width: 1200px) {
   .customer__title {
     font-size: 36px;
+    margin-bottom: 50px;
   }
 }
 
@@ -1337,6 +1346,8 @@ button {
   .cards {
     display: flex;
     flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
   }
 }
 

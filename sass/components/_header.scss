@@ -33,6 +33,7 @@
 .header__section {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .header__navigation {
@@ -64,7 +65,7 @@
   position: relative;
   color: var(--primary-color-text);
   @include font(14px, 500, 1.14, 0.02);
-  color: var(--secondary-color-text);
+  color: var(--primary-color-text);
   padding: 32px 0px;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);

@@ -16,8 +16,6 @@
       flex-wrap: wrap;
       margin: -15px;
     }
-    /*display: flex;
-    justify-content: space-between;*/
   }
 }
 
@@ -25,10 +23,9 @@
   @include font(28px, 700, 1.17, 0.03em);
   @media screen and (min-width: 1200px) {
     font-size: 36px;
+    margin-bottom: 50px;
   }
 
-  /*width: 264px;
-  height: 42px;*/
   margin-bottom: 30px;
   text-align: center;
   margin-left: auto;
